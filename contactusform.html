@@ -1,0 +1,202 @@
+//php simple contact us form with jquery library
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact Form</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--	font awesome bootstrap cdn-->
+    
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js">
+<!--	javascript library-->
+
+  <script src = " https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<style>
+	
+		div{
+			
+background-color: rgb(56,149,211);
+width: 650px;
+height: 580px;
+margin-left: 400px;
+margin-top: 50px;
+color:rgb(210,210,209);
+font-family: 'Open Sans', sans-serif;		
+
+		}
+	
+		div h1{
+			
+			
+			color: white;
+			
+			text-align: center;
+			
+			padding-top: 22px;
+             font-size: 3.3em;
+			font-family: 'Archivo Black', sans-serif;
+		}
+		div h5 {
+			
+			
+			text-align: center;
+			font-size: 1em;
+			font-family: 'Open Sans', sans-serif;
+			color:rgb(210,210,209);
+		}
+		div #aaa{
+			
+			font-family: 'Open Sans', sans-serif;
+			color:rgb(210,210,209);
+			text-align: center;
+			margin-top: -21px;
+		}
+		
+		div input{
+			
+		    margin-left: 143px;
+	       width: 363px;
+            height: 23px;
+			margin-top: -50px;
+		}
+		div m{
+			
+			
+			margin-left: 143px;
+			 margin-top: 58px;
+			font-size: 0.67em;
+			color: white;
+			font-family: 'Open Sans', sans-serif;
+		}
+		
+		div textarea{
+			
+			margin-left: 143px;
+	       width: 363px;
+		}
+		
+		div #buttonstyle{
+			
+		  width: 94px;
+          height: 33px;
+          background-color: rgb(104,180,115);
+          border-radius: 50px;
+          border: none;
+		  color: white;
+		  
+			font-family: 'Patua One', cursive;
+		}
+		
+		body{
+			
+			background-color:rgb(37,31,91);
+		}
+	
+	
+	
+	</style>
+	
+	
+	<script>
+	
+	$(document).ready(function()
+					 
+					 {
+		
+		         $("#buttonstyle").click(function()
+										
+										
+										{
+										
+										
+		var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(document.forms["name1"]["Email"].value) == false) 
+        {
+            alert('Invalid Email Address');
+            return false;
+        }
+
+        return true;			
+										
+				 });
+		
+		   
+					 
+					 
+					 
+					  });
+	
+	
+	
+	
+	
+	
+	</script>
+	
+	
+</head>
+<body>
+
+<script src="contactform.js" type="text/jscript" lang="javascript"></script>	
+<form action="mail.php" method="post" onsubmit="return validation()" name="name1">
+
+
+	
+
+	
+	<div>
+		
+		<h1>Contact us</h1>
+		
+		<h5>Got a question? We'd love to hear from you.Send us </h5>
+		
+		<h5 id="aaa">a message and we'll respond as soon as possible</h5>
+		
+		
+		
+		
+		<m>Name</m> 
+		
+		<input style="margin-top: -32px;" type="text" name="name1">
+   <br>
+   <br>
+    <m>Email Address</m>
+		
+	<input id="ccc" style="margin-top: -32px;
+   " type="text" name="Email">	
+   <br>
+   <br>
+   
+   <m>Messages</m>
+   
+  <textarea name="textarea" id="" cols="30" rows="7"></textarea>
+  
+  <br>
+  <br>
+  <input id="buttonstyle" type="submit" value="SUBMIT">
+		
+		
+	</div>
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</form>
+
+
+	
+</body>
+</html>
