@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Current date</title>
+	
+	<script src = " https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script>
+	 $(document).ready(function(){  
+	
+		 
+		   $("p").click(function(){
+			  
+		  $(this).hide();
+		   });
+
+	
+	});   
+	
+	
+	
+	
+	
+	</script>
+	
+	
+	
+</head>
+<body>
+<p>Click here for current date in US format
+
+<?php
+
+	
+	echo "Today is " . date("Y/m/d") . "<br>";
+	
+	
+	
+	
+	
+?>
+</p>	
+</body>
+</html>
